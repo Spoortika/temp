@@ -41,6 +41,12 @@
             border: 5px solid rgb(2, 50, 126);
             border-radius: 100%;
             font-family: italic;
+            box-shadow: 5px 5px 5px 5px grey;
+            transition-property: transform;
+            transition-duration: 0.2s;
+        }
+        .box:hover{
+            transform: scale(1.1,1.1);
         }
 
         body {
@@ -57,15 +63,50 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-image: url("assets/images/girl2.jpg");
+            justify-content:last baseline;
         }
 
         .caption {
             background-color:rgb(237, 102, 116);
             opacity: 60%;
+
         }
         a{
             display:flex;
         }
+        ul{
+            margin: 0px;
+            padding: 0px;
+        }
+        li{
+            display: inline-block;
+            padding: 5px;
+            font-size:larger;
+        }
+        .submenu{
+            display: none;
+            position: absolute;
+            background-color: white;
+        }
+        .menu:hover .submenu{
+            display:block;
+            background-color: beige;
+        }
+    .Services-box{
+       background-color: teal;
+        width:200px;
+        height:100%;
+        position:absolute;
+        right:0px;
+        top:90px;
+        left:0px;
+        display:none;
+    }
+    .menu:hover .Service-box{
+        background-color: hotpink;
+        display:block;
+        left:200px;
+    }
     </style>
 </head>
 
@@ -75,12 +116,21 @@
     <h3 class="c">My Application</h3>-->
     <div id="h">
         <h3><b>MY APPLICATION </b></h3>
-    <div style="display: flex;justify-content: end;">
-        <a href="#home">Home  </a>
-        <a href="#">About  </a>
-        <a href="#projects">Projects  </a>
-        <a href="#">Contact  </a>
+    <div style="display:flex;justify-content:end;">
+        <ul>
+        <li>
+        <a href="#home">Home</a></li>
+        <li class="menu">
+        <a href="#projects">Projects </a>
+        <div class="submenu">
+            <a href="#">project1</a><br />
+            <a href="#">project2</a><br />
         </div>
+    </li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+</ul>
+    </div>
     </div>
     <hr>
     <div class="row header" id="home">
@@ -110,5 +160,4 @@
         <h3 id="h">@copyrights reserved -spoortika</h3>
     </div>
 </body>
-
 </html>
