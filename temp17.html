@@ -7,13 +7,21 @@
     <script>
         function changecolor(){
             let color=document.getElementById("txtColor").value;
-            txtDiv.style.color = color;
+            let bgColor=document.getElementById("bgColor").value;
+            document.getElementById('txtDiv').style.color = color;
+            document.getElementById('txtDiv').style.backgroundColor = bgColor;
+
         }   
     </script>
 </head>
 <body>
     Enter color:<input type="text" id="txtColor" ><br><br>
-    <button onclick="changecolor()">Submit</button>
+    <select id="bgColor">
+        <option>--select--</option>
+        <option>skyblue</option>
+        <option>beige</option>
+    </select>
+    <button onclick="changecolor()">Click to change color</button>
     <h2 id="txtDiv">INCREDIBLE INDIA </h2>
 </body>
 </html>
