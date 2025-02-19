@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-color: rgb(240, 239, 239);
+      }
+      .row{
+        display:flex;
+        justify-content: center;
+      }
+      .title{
+        font-size: 20px;
+      }
+    .box {
+    width: 400px;
+    height:500px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color:white;
+ 
+    flex-direction: column;
+   }
+   input{
+    padding:10px;
+    border-radius: 5px;
+    width:150px;
+    border: 2px solid gray;
+    font-family: Verdana;
+   }
+
+   button{
+    background-color:green ;
+    width: 150px;
+    height:40px;
+    font-size: 25px;
+    border-radius: 7px;
+    color: white;
+   }
+    </style>
+   
+    </head>
+    <body>
+        <center>
+      <img src="assets/images/fb.jpg" height="65px">
+      <div class="box">
+      <h2 style=" font-family: sans-serif;">Create a new account</h2>
+      <p style=" font-family: Verdana;">It's quick and easy</p>
+      <hr />
+      <input type="text" id="name" placeholder="First Name" />
+      <input type="text" id="name" placeholder="Last Name" />
+      <p>Date of birth : <input type="date" id="dob" /></p>
+      <p><input type="text" id="email" placeholder="Mobile number or email address" /></p>
+      <p><input type="password" id="password" placeholder="new Password" /></p>
+      <button onclick="showData()">Sign up</button>
+      <div id="data"></div>
+    </div>
+    </center>
+    </body>
+</html>
