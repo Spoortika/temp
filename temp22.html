@@ -2,20 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
 </head>
 <body>
-    <img src="assets/images/ball.png" width="200px" id="ball"/>
+    <img src="/assets/images/ball.png" width="100px" id="ball" />
+    <img src="/assets/images/net.jpg" width="180px" id="net" />
     <script>
         ball.style.position="absolute";
+        net.style.position="absolute";
         let b=document.body;
         let left=0;
+        let down=500;
+        net.style.left = left + "px";
+        net.style.top = down + "px";
         b.onkeydown = (e) => {
-            left +=5;
-           ball.style.left=left+"px";
-        };
-       
+        if (e.key == "ArrowRight") left += 5;
+        if (e.key == "ArrowDown") down += 5;
+        if (e.key == "ArrowLeft") left -= 5;
+        if (e.key == "ArrowUp") down -= 5;
+        net.style.left = left + "px";
+        net.style.top = down + "px";
+      };
+        let t=0;
+        let l=0;
+        function  dropFall() {
+            t++;
+            if(t>500) {t=1
+                l=Math.random()*500;
+            }
+            ball.style.top=t + "px";
+            ball.style.left=l + "px";
+            setTimeout(dropFall,5);
+        }
+        dropFall();
     </script>
 </body>
 </html>
