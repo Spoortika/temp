@@ -135,13 +135,13 @@
             if(gender[2].checked) g=pronoun;
             let str=`
             <div>
-              <
+              
                 <p>Name:${firstname} ${surname}</p>
                 <p>Email:${email}</p>
                 <p>Password:${password}</p>
                 <p>Gender:${g}</p>
                 <p>Date of Birth:${dob}</p>
-             <button onclick="showForm">Edit</button>
+            <button onclick="showForm()">Edit</button>
             <button>Confirm</button>
             </div>`;
             root.innerHTML=str;
